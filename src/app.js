@@ -9,8 +9,8 @@ app.set('view engine','ejs');
 
 app.use(express.static(path.join(__dirname,'public')))
 
-const accountData = fs.readFileSync('src/json/accounts.json',{encoding:'utf-8'});
-const accounts = JSON.parse(accountData);
+const userData = fs.readFileSync('src/json/accounts.json',{encoding:'utf-8'});
+const users = JSON.parse(userData);
 
 app.get('/', (req, res) => {
     res.render('index', {
