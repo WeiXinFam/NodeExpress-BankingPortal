@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const accounts = require('../data');
-const writeJSON = require ('../data');
+const writeJSON = accounts.writeJSON;
 
 router.get('/transfer', (req, res) => {
     res.render('transfer')
